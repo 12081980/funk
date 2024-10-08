@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Bebas+Neue&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&family=Teko:wght@300..700&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Google Sans Regular;"
+}
+
+body {
+    /* background-color: #000000; */
+    /* background-color: #0f1620ff; */
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    /* background-color: #0f1620ff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fefefe;
+    font-family: 'Bangers', system-ui;
+    letter-spacing: 2px;
+}
+
+.hamb {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 25px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav-bar ul li a:hover {
+    color: #000000;
+    background-color: #fefefe;
+}
+
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .hamb {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamb .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #000000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 500px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+
+}
+
+
+p {
+    letter-spacing: 1.5px;
+    font-family: 'Bebas Neue', sans-serif;
+    /* font-family: 'Bangers', system-ui; */
+    font-size: 50px;
+    color: #fefefe;
+    line-height: 60px;
+
+}
+
+
+#f1 {
+    font-size: 65px;
+}
+
+#f2 {
+    margin-left: 26px;
+}
+
+#f3 {
+    font-size: 60px;
+    margin-left: 26px;
+}
+
+#f4 {
+    margin-left: 26px;
+    font-size: 70px;
+}
+
+#f5 {
+    margin-left: 26px;
+    font-size: 50px;
+}
+
+#f6 {
+    margin-left: 26px;
+    font-size: 60px;
+}
+
+
+.home {
+    margin-top:50px;
+    margin-left: 25px;
+}
+
+footer {
+    margin-left: 50%;
+    /* margin-top: 10%; */
+}
+
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(36, 35, 35);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+/* Restante do seu CSS ... */
+
+@media only screen and (max-width: 768px) {
+
+    footer {
+        margin-left: 35%;
+        margin-top: 10%;
+    }
+}
+
+#login {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Teko', sans-serif;
+}
+
+#tela-login {
+    background-color: #efefef;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #101010ff;
+
+}
+
+.log {
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px rgb(105, 105, 105);
+    background-color: #efefef;
+    font-size: 23px;
+    letter-spacing: 0.7px;
+    font-family: 'Teko', sans-serif;
+}
+
+.log:focus {
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+
+button {
+    background-color: #101010ff;
+    color: #efefef;
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000d9;
+
+}
+
+::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 23px;
+}
+
+/* login */
+
+/* cadastro */
+
+label {
+    font-size: 23px;
+    letter-spacing: 0.7px;
+    font-family: 'Teko', sans-serif;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #efefef;
+    padding: 25px;
+    border-radius: 15px;
+    width: 20%;
+}
+
+fieldset {
+    border: 1px solid rgb(105, 105, 105);
+    padding: 5px;
+}
+
+legend {
+    background-color: #101010ff;
+    color: #efefef;
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.inputBox {
+    position: relative;
+    padding: 5px;
+}
+
+.inputUser {
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(105, 105, 105);
+    outline: none;
+    color: black;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -23px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.844);
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#data_nasc {
+    position: absolute;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Teko', sans-serif;
+}
+
+#submit {
+    background-color: #101010ff;
+    color: #efefef;
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.nav-bar ul li a.active {
+    color: #000000;
+    background: #fefefe;
+}
+
+h1{
+    color: #efefef;
+}
+.inicio{
+        height: 85vh;
+        width: 100%;
+
+}
+.login{
+    min-height: 90vh;
+    background-image: url("../img/paulin.png");
+    background-size: cover;
+    background-position: right;
+  
+   
+
+}
+.home{
+    background-image: url("../img/funk4.jpg");
+    height: 110vh;
+    padding-top: 5%;
+}
+/* cadastro */
+
+.nav-bar {
+    /* background-color: #0f1620ff; */
+    background-color: black;
+}
+
+.nav-bar ul li a.active {
+    color: #000000;
+    background: #fefefe;
+}
+
+header {
+    height: 10vh;
+    background-color: black;
+    /* background-color: #0f1620ff; */
+
+}
+
+.cad {
+    background-image: url("../img/ws.png");
+    min-height: 90vh;  
+    background-size: cover;
+    background-position: right;
+
+}
+.boxCad {
+   
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #efefef;
+    padding: 5px;
+    border-radius: 15px;
+    width: 20%;
+}
+footer{
+    margin-top: 10rem;
+}
+
+.dados{
+    min-height: 70vh;
+    /* background-image: url("../img/paulin.png"); */
+    background-size: cover;
+    background-position: right;
+    background-color: #aba1a1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #101010ff;
+
+}
+table{
+    background-color: rgba(0,0,0,.2 );
+    width: 80%;
+    margin:30px auto;
+}
+
+tr{
+    line-height: 30px;
+}
+tr#titulo{
+    font-weight: bold;
+    background-color: rgba(0,0,0,.6 );
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+}
+td {
+    padding: 0px 30px;
+}
+
+
+.tela-login {
+    background-color: #efefef;
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 15px;
+    color: #101010ff;
+
+}
+#onclick a{
+    text-align: center;
+    color: #000000;
+    font-size: 15px;
+}
+.painel{   
+    width: 98%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+ 
+}
+.painel p{
+    color: white;
+    font-size: 15pt;
+}
+.painel a{
+    color: white;  
+}
