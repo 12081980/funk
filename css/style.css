@@ -15,7 +15,7 @@
 body {
     /* background-color: #000000; */
     /* background-color: #0f1620ff; */
-    background-color: black;
+    background-color: #0d0d0d;
 }
 
 header {
@@ -172,7 +172,7 @@ p {
 
 footer {
     margin-left: 50%;
-    /* margin-top: 10%; */
+    margin-top: 10%;
 }
 
 
@@ -368,8 +368,8 @@ h1{
     color: #efefef;
 }
 .inicio{
-        height: 85vh;
-        width: 100%;
+        height: 50vh;
+        width: 98%;
 
 }
 .login{
@@ -495,3 +495,429 @@ td {
 .painel a{
     color: white;  
 }
+
+/* css carrinho */
+
+.max-width{
+    width: 100%;
+    min-height: auto;
+}
+.bg2{  
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    }
+.container{
+    max-width: 1680px;
+    margin:0 auto;
+    display: flex;
+
+ 
+    /* align-items: center; */
+    justify-content: center;
+    min-height: 95vh;
+}
+.titulo{
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    text-shadow: 0 0 10px #545454;
+    color: #2b2b2b;        
+}
+.line{
+    width: 80%;
+    height: 2px;
+    background: #17203f;
+    position: relative;
+    top: 10px;
+}
+.texto-titulo{
+    position: relative;
+    top: -10px;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+    background: #8b634a;
+    color: #fff;
+
+}
+.boxcar{
+    width: 15%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2%;
+    transition: 0.5s ease;
+        }
+    
+       .pagina2{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-top: 50px;
+            /* min-height: 300px; */
+       
+        }
+        #part .container{
+            flex-direction: column;
+            align-items: flex-start;
+         
+        }
+        #part .titulo h2{
+            font-family: 'Monteserrat Alternates',sans-serif;
+        }
+        
+        #part .boxcar{
+            box-shadow: 0 5px 20px #2b2b2b;
+            background: transparent;
+            margin-bottom: 120px;
+        }
+        #part .boxcar img{
+            width: 100%;
+        }
+        #part .boxcar h2{
+            margin-top: 10px;
+            text-align: start;
+            font-weight: 300;
+        
+        }
+        #part .boxcar p,span{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: start;
+            font-weight: 500;
+            font-size: 14px;
+            font-style: italic;
+            font-family: 'Monteserrat Alternates',sans-serif;
+        }
+        #part .boxcar .text{
+            margin-right: 80px;
+        
+        }
+        #part .boxcar .text i{
+            position: relative;
+            bottom: 35px;
+            left: 180px;
+            font-size: 20px;
+        
+        }
+        .btn{
+            font-size: 15px;
+            
+       
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .car span{
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: space-between;
+        }
+       #car{
+        display: flex;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        color: white;border-radius: 50%;      
+        }
+        .showmenu .menucar{
+          inset: 0 -400 0 auto;
+
+
+        }
+        .showmenu .containercar{
+          transform: translateX(-250px);  
+        }
+ .containercar{
+    width: 100%;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    transition:  transform .5s;
+    background-color: white;
+   
+ }
+ .iconecarrinho{
+width: 30px;
+font-size: 50px;
+ }
+ .headercar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+ }
+ .headercar .iconecarrinho{
+position: relative;
+ }
+ .spancar{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    right: -15px;
+ }
+ .listadeprodutos img{
+    width: 50%;
+    filter: drop-shadow(0 50px 20px #0009);
+
+ }
+ .listadeprodutos{
+    display: flex;  
+    gap: 20px;
+ }
+ .listadeprodutos .item{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+ }
+ .listadeprodutos .item h2{
+    font-weight: 500;
+    font-size: large;
+ }
+ .listadeprodutos .item .preco {
+    letter-spacing: 7px;
+    font-size: small;
+ }
+ .listadeprodutos .item button{
+    background-color: #353432;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+ }
+        .menucar{
+            width: 400px;
+            background-color: #262424;
+            color: white;
+            position: fixed;
+            inset: 0 -400px 0 auto;
+            display: grid;
+            grid-template-rows:70px 1fr 70px ;
+            transition: .5s;
+
+        }
+         .menucar h1{
+            padding: 20px;
+            margin: 0;
+            font-weight: 300;
+            align-items: center;
+        }
+      
+        .menucar .btncar{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+        .menucar .btncar .addcar:hover{
+background-color: green;
+        }
+  
+        .menucar .produtoscarrinho .item img{
+            width: 100%;
+        }
+     
+        .menucar .produtoscarrinho .item{
+            display: grid;
+            grid-template-columns: 70px 150px 50px 1fr;
+            gap: 10px;
+            text-align: center;
+            align-items: center;
+        }
+       
+        .produtoscarrinho .quantidade span{
+            display: inline-block;
+            padding: 6px ;
+            width: 25px;
+            height: 25px;
+            background-color: #eee;
+            color: #151515;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+      
+        .produtoscarrinho .quantidade span:nth-child(2){
+            background-color: transparent;
+            color: #eee;
+        }
+           
+        .produtoscarrinho .item:nth-child(even){
+            background-color: #0001;
+        }
+        .produtoscarrinho{
+            overflow: auto;
+        }
+        .produtoscarrinho::-webkit-scrollbar{
+            width: 0;
+        } 
+
+        .search-container{
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+          }
+          
+          input#search-bar{
+            margin: 0 auto;
+            width: 100%;
+            height: 45px;
+            padding: 0 20px;
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: 12px;
+            outline: none;
+            &:focus{
+              border: 2px solid white;
+              transition: 0.35s ease;
+              color: white;
+              &::-webkit-input-placeholder{
+                transition: opacity 0.45s ease; 
+                  opacity: 0;
+               }
+              &::-moz-placeholder {
+                transition: opacity 0.45s ease; 
+                  opacity: 0;
+               }
+              &:-ms-placeholder {
+               transition: opacity 0.45s ease; 
+                 opacity: 0;
+               }    
+             }
+           }
+          
+          .search-icon{
+            position: relative;
+            float: right;
+            width: 75px;
+            height: 75px;
+            top: -62px;
+            right: -15px;
+           
+          }
+          
+          .loja{
+            width: 98%;
+            display: flex;    
+           margin-left: 30px;
+           margin-right: 30px;
+            
+            
+          }
+          
+          .boxloja {
+            width: 24%;
+            height: 60vh;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            /* padding: 50px; */
+            margin: 5px ;
+            /* box-shadow: white  5px 0 5px; */
+            /* border: 1px solid white; */
+            /* background-color: transparent; */
+          
+          }
+          .imgbox img{
+            /* width: 80px;
+            height: 20vh;
+            position: relative; */
+          }
+
+          #servicos .containerserv input[type=radio]{
+            display: none;
+        
+        
+        }
+        #servicos .containerserv .cards{
+            position:relative ;
+            width: 100%;
+            height: 100vh;
+        }
+        #servicos .containerserv .card{
+            position: absolute;
+            width: 40%;
+            height: 80%;
+            top: -120px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            box-shadow: 0 0 10px #848790;
+            transition: 0.4s ease;
+            cursor: pointer;
+        
+        
+        }
+        #servicos .containerserv .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        
+        }
+        #servicos .containerserv .card button{
+            position: absolute;
+            bottom: 10px;
+            z-index:9 ;
+            text-transform: uppercase;
+            cursor: pointer;
+        
+        }
+        #item-1:checked ~ .cards #song-3,
+        #item-2:checked ~ .cards #song-1,
+        #item-3:checked ~ .cards #song-2{
+            transform: translatex(-100%) scale(0.8);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        #item-1:checked ~ .cards #song-2,
+        #item-2:checked ~ .cards #song-3,
+        #item-3:checked ~ .cards #song-1{
+            transform: translatex(100%) scale(0.8);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        #item-1:checked ~.cards #song-1,
+        #item-2:checked ~.cards #song-2,
+        #item-3:checked ~.cards #song-3{
+            transform: translatex(0) scale(1);
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        
+         

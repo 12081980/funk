@@ -5,13 +5,15 @@ define('VIEW_PATH', BASE_PATH . 'view/');
 define('CONTROLLER_PATH', BASE_PATH . '../controller/');
 
 
-function includeWithErrorHandling($path) {
+function includeWithErrorHandling($path)
+{
     if (file_exists($path)) {
         include $path;
     } else {
-        
+
         error_log("File not found: " . $path);
         include(VIEW_PATH . '404.php');
+
     }
 }
 
@@ -28,7 +30,8 @@ $validPages = [
     'login' => VIEW_PATH . 'contatos/login.php',
     'usuario' => VIEW_PATH . 'contatos/usuario.php',
     'cadastro' => VIEW_PATH . 'contatos/cadastro.php',
-    'usuario_adm' => VIEW_PATH . 'contatos/usuario_adm.php'
+    'usuario_adm' => VIEW_PATH . 'contatos/usuario_adm.php',
+    'carrinho' => VIEW_PATH . 'carrinho/carrinho.php'
 ];
 
 $menuop = isset($_GET['menuop']) ? basename($_GET['menuop']) : 'home';
@@ -41,8 +44,8 @@ if (array_key_exists($menuop, $validPages)) {
 } elseif ($menuop === 'update') {
     includeWithErrorHandling(CONTROLLER_PATH . 'updateCad.php');
 } else {
-  
+
     includeWithErrorHandling(VIEW_PATH . '404.php');
 }
-includeWithErrorHandling(BASE_PATH . 'suporte/footer.php');
+// includeWithErrorHandling(BASE_PATH . 'suporte/footer.php');
 ?>

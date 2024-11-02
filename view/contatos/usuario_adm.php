@@ -1,6 +1,4 @@
 <?php
-session_start(); // Inicia a sessão
-
 require_once './model/classeUsuario.php';
 
 // Verifica se o usuário está logado e é um administrador
@@ -17,10 +15,10 @@ try {
 
 ?>
 
-<div class="painel">  
-    <p>Olá, <?php echo htmlspecialchars($_SESSION['user_nome']); ?>!</p> 
+<div class="painel">
+    <p>Olá, <?php echo htmlspecialchars($_SESSION['user_nome']); ?>!</p>
 
-    <a href="./controller/sair.php">   
+    <a href="./controller/sair.php">
         <span class="material-symbols-outlined">logout</span>
     </a>
     <br>
@@ -60,4 +58,5 @@ try {
 </div>
 
 </body>
+
 </html>
