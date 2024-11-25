@@ -15,18 +15,19 @@
 body {
     /* background-color: #000000; */
     /* background-color: #0f1620ff; */
-    background-color: #0d0d0d;
+    background-color: #101010;
+    /* overflow: hidden; */
 }
 
 header {
     width: 100%;
     height: 5vh;
-    background-color: black;
+    background-color:#101010;
     /* background-color: #0f1620ff; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
+    /* padding: 0 100px; */
 }
 
 .logo {
@@ -43,6 +44,7 @@ header {
 
 .nav-bar ul {
     display: flex;
+    background-color:#101010;
 }
 
 .nav-bar ul li a {
@@ -57,7 +59,7 @@ header {
 }
 
 .nav-bar ul li a:hover {
-    color: #000000;
+    color: #101010;
     background-color: #fefefe;
 }
 
@@ -96,7 +98,7 @@ header {
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: #000000;
+        background-color: #101010;
         transition: 0.5s;
         overflow: hidden;
     }
@@ -164,17 +166,19 @@ p {
     font-size: 60px;
 }
 
-
-.home {
-    margin-top:50px;
-    margin-left: 25px;
-}
-
 footer {
-    margin-left: 50%;
-    margin-top: 10%;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 12rem;
+  
 }
-
+footer img{
+    width: 50px;
+    height: 10vh;
+    margin: 10px;
+}
 
 body::-webkit-scrollbar {
     width: 5px;
@@ -182,7 +186,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: rgb(36, 35, 35);
+    background: #101010;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -204,7 +208,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color: #000000;
+    color: #101010;
     font-family: 'Teko', sans-serif;
 }
 
@@ -216,8 +220,15 @@ body::-webkit-scrollbar-thumb {
     transform: translate(-50%, -50%);
     padding: 80px;
     border-radius: 15px;
-    color: #101010ff;
+    color: #101010;
 
+}
+#tela-login button{
+   font-size: 18px; 
+   
+}
+#tela-login button:hover{
+    scale: 1.1;
 }
 
 .log {
@@ -368,8 +379,9 @@ h1{
     color: #efefef;
 }
 .inicio{
-        height: 50vh;
+        height: 100vh;
         width: 98%;
+        background-color:#101010;
 
 }
 .login{
@@ -382,9 +394,12 @@ h1{
 
 }
 .home{
-    background-image: url("../img/funk4.jpg");
-    height: 110vh;
+    /* background-image: url("../img/funk4.jpg"); */
+    height: 90vh;
+    /* background-position: right; */
     padding-top: 5%;
+    /* background-size: cover; */
+    /* background-color:#101010; */
 }
 /* cadastro */
 
@@ -400,7 +415,7 @@ h1{
 
 header {
     height: 10vh;
-    background-color: black;
+    background-color: #101010;
     /* background-color: #0f1620ff; */
 
 }
@@ -423,24 +438,25 @@ header {
     border-radius: 15px;
     width: 20%;
 }
-footer{
-    margin-top: 10rem;
-}
 
 .dados{
     min-height: 70vh;
     /* background-image: url("../img/paulin.png"); */
     background-size: cover;
     background-position: right;
-    background-color: #aba1a1;
+    background-color:transparent;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 80px;
     border-radius: 15px;
-    color: #101010ff;
+    color: whitesmoke;
 
+}
+.dados input{
+    display: flex;
+   
 }
 table{
     background-color: rgba(0,0,0,.2 );
@@ -479,6 +495,9 @@ td {
     color: #000000;
     font-size: 15px;
 }
+#onclick a:hover{
+    scale: 1.1;
+}
 .painel{   
     width: 98%;
     height: 15vh;
@@ -500,20 +519,20 @@ td {
 
 .max-width{
     width: 100%;
-    min-height: auto;
+   
+   
 }
 .bg2{  
-    background-size: cover;
+  
     width: 100%;
     height: auto;
     }
 .container{
-    max-width: 1680px;
+  
     margin:0 auto;
     display: flex;
 
  
-    /* align-items: center; */
     justify-content: center;
     min-height: 95vh;
 }
@@ -835,27 +854,30 @@ background-color: green;
             
           }
           
-          .boxloja {
-            width: 24%;
-            height: 60vh;
-            text-align: center;
-            color: white;
+          .boxloja {          
+            width: 40%;
+            height: 10vh;          
+            left: 0;
+            right: 0;
+            margin: 8px;
             display: flex;
-            justify-content:space-between;
-            align-items: center;
-            /* padding: 50px; */
-            margin: 5px ;
-            /* box-shadow: white  5px 0 5px; */
-            /* border: 1px solid white; */
-            /* background-color: transparent; */
-          
-          }
-          .imgbox img{
-            /* width: 80px;
-            height: 20vh;
-            position: relative; */
-          }
-
+            align-items: flex-start;
+            justify-content: center;
+            box-shadow: 0 0 10px #848790;                
+          }         
+.btnloja{
+    position: absolute;
+    bottom: 1px;   
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btnloja img{   
+    box-shadow: 0 0 10px #848790;
+}
+.btnloja p{   
+    text-align: center;
+    font-size: 25px;
+}
           #servicos .containerserv input[type=radio]{
             display: none;
         
@@ -864,12 +886,12 @@ background-color: green;
         #servicos .containerserv .cards{
             position:relative ;
             width: 100%;
-            height: 100vh;
+            height: 80vh;
         }
         #servicos .containerserv .card{
             position: absolute;
             width: 40%;
-            height: 80%;
+            height: 70%;
             top: -120px;
             left: 0;
             right: 0;
@@ -891,33 +913,402 @@ background-color: green;
         }
         #servicos .containerserv .card button{
             position: absolute;
-            bottom: 10px;
+            bottom: 2px;
             z-index:9 ;
             text-transform: uppercase;
             cursor: pointer;
         
         }
+        
         #item-1:checked ~ .cards #song-3,
         #item-2:checked ~ .cards #song-1,
-        #item-3:checked ~ .cards #song-2{
+        #item-3:checked ~ .cards #song-2 {
             transform: translatex(-100%) scale(0.8);
             opacity: 0.4;
             z-index: 0;
         }
+        
+        
         #item-1:checked ~ .cards #song-2,
         #item-2:checked ~ .cards #song-3,
-        #item-3:checked ~ .cards #song-1{
+        #item-3:checked ~ .cards #song-1 {
             transform: translatex(100%) scale(0.8);
             opacity: 0.4;
             z-index: 0;
         }
-        #item-1:checked ~.cards #song-1,
-        #item-2:checked ~.cards #song-2,
-        #item-3:checked ~.cards #song-3{
+        
+        #item-1:checked ~ .cards #song-1,
+        #item-2:checked ~ .cards #song-2,
+        #item-3:checked ~ .cards #song-3
+    
+      
+         {
             transform: translatex(0) scale(1);
             opacity: 1;
             z-index: 1;
         }
         
+       .usuario {
+            width: 100%;             
+            /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-top: 15px;
+        }
+.dadospessoais{
+    width: 50%;    
+ 
+    /* background-color: blue; */
+}
+.interacao{
+    width: 40%;
+   
+    /* background-color:green; */
+}
+        .dadospessoais input{  
+            width: 80%;         
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;        
+            border: 0 2px 2px 0  solid  ;
+            padding: 10px;
+         background-color: transparent;
+         color: white;
+         margin: 10px;
+        }
+        .dadospessoais  ::placeholder{
+color: white;
+font-size: 25px;
+        }
+        .interacao ::placeholder{
+            color: white;
+            font-size: 25px;
+                    }
+        .interacao input{  
+            width: 80%;         
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;        
+            border: none ;
+            padding: 10px;
+         background-color: transparent;
+         margin: 30px;
+        }
+  
+        .perfil{
+            display: flex;
+            /* align-items: end; */
+            justify-content: right;
+     
+           
+        }
         
+         .perfil p{
+        text-align: right;
+        font-size: 18px;    
+      
+            
+         }  
+         .perfil p:hover{
+           scale: 1.1;
+            
+         }  
+         .perfil a {
+            color: white;
+            margin-left: 3px;
+      
+          cursor: pointer;
+         } 
+         .perfil a span{
+            padding: 6px;
+         }
+         .perfil span{          
+            color: white;
+         }  
+        .perfil span:hover{
+            scale: 1.1;
+           
+        }
          
+         .interacao{
+            margin-top: 10px;
+            /* color: rgb(239, 23, 23); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+        .lineuser{  
+            display: flex; 
+            justify-content: space-between;         
+            background-color: transparent;
+            width: 80%;
+            border: 0 1px solid;
+            border-radius: 30px;
+            color: white;
+            margin-top: 25px;
+            
+        }
+        .lineuser a{
+            font-size: 30px;
+            font-family:roboto;
+            text-decoration: none;
+            color: white;
+        }
+        .lineuser span{
+            display: flex;
+            align-items: end;
+            font-size: 30px;
+            margin-top: 0;
+            cursor: pointer;
+
+        }
+        .lineuser span:hover{
+         scale: 1.5;
+            color:green;
+        }
+        .musica{
+        width: 100%;
+        /* background-color: red;  */
+         height: 80vh;
+        margin-top: 10px;
+        display: flex;
+     margin-left: 20px;
+        }
+        .favorita{
+
+width: 50%;
+        }
+        .fan{
+background-color: yellow;
+width: 50%;
+        }
+              
+        .cadastro{
+            width: 98%;
+         height: 80vh;        
+         display: flex;
+      margin-left: 20px;
+      padding: 10px;
+      justify-content: space-between;
+           
+        }
+.tela-login2{
+    width: 48%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    background-color: #efefef; 
+    border-radius: 15px;
+    color: #101010ff;
+   
+}
+.tela-login2 input{
+    width: 100%;
+
+}
+
+.endereco{
+    width: 48%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;   
+    border-radius: 15px;
+    color: #101010ff; 
+}
+.endereco input{
+font-size: 20px;
+}
+#btncad{
+    margin-top: 30px;
+   
+ 
+}
+.homepage{
+    display: flex;
+}
+.hometitulo{
+    width: 50%;
+  text-align: center;
+  margin-top: 50px;
+}
+.homeimagem{
+    width: 50%;
+    margin-top: 50px;
+}
+.homeimagem img{
+    width: 900px;
+    height: 500px;
+}
+.carrinho{
+    width: 98%;
+    display: flex;
+    padding: 10px;
+   margin: 10px;
+    
+}
+ .entrega{
+    width: 50%;
+    margin: 5px;
+    color: whitesmoke;
+  font-size: 10px;
+}
+.entrega label{
+    font-size: 14px;
+}
+.entrega input{
+    height: 15px;
+    
+}
+.entrega h1 {
+    font-size: 30px;
+}
+.entrega span{
+    /* padding: 10px; */
+    margin-top: 10px;
+    font-size: 30px;
+}
+.boxcarrinho {
+    width: 50%;
+    /* background-color:yellow; */
+    margin: 5px;
+    display: flex;
+}
+.boxcarrinho img{
+    width: 90px;
+    height: 90px;
+
+}
+
+.linecar{
+    background-color:whitesmoke;
+    width: 100%;
+    height: 3px;
+}
+.boxsobre{
+    width: 100%;
+    height: 30vh;          
+    left: 0;
+    right: 0;
+    margin: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 0 10px #848790; 
+}
+
+
+.textoorigem  {
+    /* background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/funkraiz.jfif); */
+    height: 40vh;
+    /* background-repeat: no-repeat; */
+   color: whitesmoke;
+   font-size: 25px;
+   margin-left: 10%;
+   margin-bottom: 10px;
+  
+     
+   
+}
+.textoorigem h4{
+    margin: 20px 20px;
+    text-align: justify;
+}
+.textocultura h4{
+    margin: 20px 20px;
+    text-align: justify;
+}
+.textobrasil h4{
+    margin: 20px 20px;
+    text-align: justify;
+}
+.textobrasil{
+
+      /* background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/funkraiz.jfif); */
+      height: 40vh;
+      /* background-repeat: no-repeat; */
+     color: whitesmoke;
+     font-size: 25px;
+    
+   
+}
+.textocultura{
+     /* background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../img/funkraiz.jfif); */
+     height: 10vh;
+     /* background-repeat: no-repeat; */
+    color: whitesmoke;
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.sobre{
+    width: 100%;
+    height: 110vh;
+    /* background-image:linear-gradient(rgba(5, 4, 4, 0.5), rgba(0,0,0,0.5)), url(../img/funkfundo.jfif); */
+   margin: 10px;
+}
+
+
+
+/* cadasastro de produto */
+
+.produtoCad {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+td input[type="text"] {
+    width: 90%;
+}
+
+ #togglePassword{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 30px;
+}

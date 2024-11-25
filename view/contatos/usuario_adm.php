@@ -1,62 +1,67 @@
-<?php
-require_once './model/classeUsuario.php';
+<div class="perfil">
 
-// Verifica se o usuário está logado e é um administrador
-if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
-    header("Location: login.php");
-    exit();
-}
-
-try {
-    $user = new Usuario("funk_rap", "localhost", "root", "");
-} catch (Exception $e) {
-    die("Falha na conexão: " . $e->getMessage());
-}
-
-?>
-
-<div class="painel">
-    <p>Olá, <?php echo htmlspecialchars($_SESSION['user_nome']); ?>!</p>
-
-    <a href="./controller/sair.php">
+    <p> <?php echo $_SESSION['user_nome']; ?>! ADMISTRADOR</p> <a href="./controller/sair.php">
         <span class="material-symbols-outlined">logout</span>
     </a>
-    <br>
+
 </div>
+<section class="loja">
+    <div class="boxloja">
+        <h1>USUARIOS CADASTRADOS</h1>
+        <div class="imgbox">
+            <img src="" alt="">
+        </div>
+        <div class="btnloja">
 
-<div class="dados">
-    <h2>Dados dos usuários</h2>
-    <table>
-        <tr id="titulo">
-            <td>Nome</td>
-            <td>Telefone</td>
-            <td>Email</td>
-            <td colspan="2">Ações</td>
-        </tr>
+            <a href=" ./index.php?menuop=usuarioCad">
+                <button>VISUALIZAR</button>
+            </a>
+        </div>
+    </div>
 
-        <?php
-        $dados = $user->buscarDados();
-        if (count($dados) > 0) {
-            foreach ($dados as $usuario) {
-                echo "<tr>";
-                foreach ($usuario as $key => $value) {
-                    if ($key != "id" && $key != "senha" && $key != "role") {
-                        echo "<td>" . htmlspecialchars($value) . "</td>";
-                    }
-                }
-                echo "<td>
-                        <a href='./model/classeUsuario.php?id=" . htmlspecialchars($usuario['id']) . "'>Editar</a>
-                        <a href='dados.php?id=" . htmlspecialchars($usuario['id']) . "'>Excluir</a>
-                      </td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='4'>Não há pessoas cadastradas</td></tr>";
-        }
-        ?>
-    </table>
-</div>
+    <div class="boxloja">
+        <h1>PRODUTOS</h1>
+        <div class="imgbox">
+            <img src="" alt="">
+        </div>
+        <div class="btnloja">
 
-</body>
+            <a href=" ./index.php?menuop=produtos">
+                <button>VISUALIZAR</button>
+            </a>
+        </div>
+    </div>
 
-</html>
+    </div>
+    <div class="boxloja">
+        <h1>N° DE VISITAS</h1>
+        <div class="imgbox">
+            <img src="" alt="">
+        </div>
+        <div class="btnloja">
+
+            <!-- <a href=" ./index.php?menuop=carrinho"> -->
+            <button>VISUALIZAR</button>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="boxloja">
+        <h1>COMENTARIOS</h1>
+        <div class="imgbox">
+
+        </div>
+        <div class="btnloja">
+
+            <!-- <a href=" ./index.php?menuop=carrinho"> -->
+            <button>VISUALIZAR</button>
+            </a>
+        </div>
+    </div>
+    <div class="produto">
+        <img src="" alt="">
+    </div>
+    </div>
+
+
+</section>

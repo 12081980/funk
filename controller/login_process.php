@@ -26,16 +26,20 @@ if ($result->num_rows > 0) {
         // Redireciona baseado no papel do usuário
         if ($usuario['role'] === 'admin') {
             header("Refresh: 1;url=../index.php?menuop=usuario_adm");
-          
+
         } else {
-            header("Refresh: 1;url=../index.php?menuop=usuario");
+            header("Refresh: 1;url=../index.php?menuop=home");
         }
         exit();
     } else {
         echo "Senha incorreta!";
+        header("Refresh: 1;url=../index.php?menuop=login");
     }
+
 } else {
     echo "Usuário não encontrado!";
+    header("Refresh: 1;url=../index.php?menuop=login");
+
 }
 
 // Fecha a conexão

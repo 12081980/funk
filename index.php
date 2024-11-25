@@ -31,7 +31,13 @@ $validPages = [
     'usuario' => VIEW_PATH . 'contatos/usuario.php',
     'cadastro' => VIEW_PATH . 'contatos/cadastro.php',
     'usuario_adm' => VIEW_PATH . 'contatos/usuario_adm.php',
-    'carrinho' => VIEW_PATH . 'carrinho/carrinho.php'
+    'carrinho' => VIEW_PATH . 'carrinho/carrinho.php',
+    'compra' => VIEW_PATH . 'compra/compra.php',
+    'produtos' => VIEW_PATH . 'compra/produtos.php',
+    'tabela' => VIEW_PATH . 'carrinho/tabelaProdutos.php',
+    'usuarioCad' => VIEW_PATH . 'adm/usuariosCadastrados.php',
+    'produtosCad' => VIEW_PATH . 'adm/produtosCadastrados.php'
+
 ];
 
 $menuop = isset($_GET['menuop']) ? basename($_GET['menuop']) : 'home';
@@ -47,5 +53,5 @@ if (array_key_exists($menuop, $validPages)) {
 
     includeWithErrorHandling(VIEW_PATH . '404.php');
 }
-// includeWithErrorHandling(BASE_PATH . 'suporte/footer.php');
+includeWithErrorHandling(BASE_PATH . 'suporte/footer.php');
 ?>
