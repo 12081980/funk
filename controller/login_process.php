@@ -32,12 +32,13 @@ if ($result->num_rows > 0) {
         }
         exit();
     } else {
-        echo "Senha incorreta!";
+        echo "<script>alert('Usuario ou senha incorretos');</script>";
+        // echo "Usuario ou senha incorretos";
         header("Refresh: 1;url=../index.php?menuop=login");
     }
 
 } else {
-    echo "Usuário não encontrado!";
+    // echo "Usuário não encontrado!";
     header("Refresh: 1;url=../index.php?menuop=login");
 
 }

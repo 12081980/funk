@@ -11,13 +11,13 @@ async function getAccessToken() {
     });
 
     const data = await response.json();
-    return data.access_token;
+    return data.access_token;   
 }
 
 // Função para buscar músicas
 async function searchTracks(query) {
     const token = await getAccessToken();
-    const response = await fetch(`https://api.spotify.com/v1/search?q=${query}&type=track&limit=10`, {
+    const response = await fetch(`https://api.spotify.com/v1/search?q=${query}&type=track&limit=2`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`,

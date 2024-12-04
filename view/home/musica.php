@@ -83,7 +83,6 @@
         <div class="containerMusica">
             <div class="buttons">
                 <button id="likeButton">Curtir</button>
-                <button id="shareButton">Compartilhar</button>
             </div>
 
             <div id="likeStatus" style="margin-top: 10px; color:white">Curtido: 0</div>
