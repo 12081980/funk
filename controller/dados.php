@@ -48,12 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar'])) {
 
 
     // Validação dos campos
-    if (empty($nome) || empty($telefone) || empty($email) || empty($bairro) || empty($logradouro) || empty($numero) || empty($cidade) || empty($estado)) {
+    if (empty($nome) || empty($telefone) || empty($email) || empty($role) || empty($bairro) || empty($logradouro) || empty($numero) || empty($cidade) || empty($estado)) {
         $_SESSION['message'] = 'Todos os campos são obrigatórios.';
     } else {
         try {
             // Atualiza os dados do usuário
-            if ($user->atualizarDados($id_usuario, $nome, $telefone, $email, $role, $bairro, $logradouro, $numero, $cidade, $estado, $role)) {
+            if ($user->atualizarDados($id_usuario, $nome, $telefone, $email, $role, $bairro, $logradouro, $numero, $cidade, $estado)) {
                 $_SESSION['message'] = 'Dados do usuário atualizados com sucesso.';
                 header("Location: ../index.php?menuop=usuario_adm");
                 exit();
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar'])) {
         <label for="role">Tornar esse usuário administrador:</label><br>
         <input type="radio" id="sim" name="role" value="admin" <?php echo (isset($dados_usuario['role']) && $dados_usuario['role'] === 'admin') ? 'checked' : ''; ?>>
         <label for="sim">Sim</label><br>
-        <input type="radio" id="nao" name="role" value="user" <?php echo (isset($dados_usuario['role']) && $dados_usuario['role'] === 'user') ? 'checked' : ''; ?>>
+        <input type="radio" id="nao" name="role" value="user_role" <?php echo (isset($dados_usuario['role']) && $dados_usuario['role'] === 'user_role') ? 'checked' : ''; ?>>
         <label for="nao">Não</label><br><br>
 
 

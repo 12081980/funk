@@ -3,7 +3,6 @@ include_once("../banco/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Coletando os dados do formulário
     $nome = isset($_POST['nome']) ? trim($_POST['nome']) : '';
     $tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
@@ -14,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cidade = isset($_POST['cidade']) ? trim($_POST['cidade']) : '';
     $estado = isset($_POST['estado']) ? trim($_POST['estado']) : '';
 
-    // Validações
     if (empty($nome)) {
         die("Preencha seu nome");
     }
@@ -42,11 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($estado)) {
         die("Preencha o estado");
     }
+    $stmt_check_email = $conn->prepare("SELECT email FROM usuarios WHERE email = ?");
+    $stmt_check_email->bind_param("s", $email);
+    $stmt_check_email->execute();
+    $stmt_check_email->store_result();
 
-    // Hash da senha
+    if ($stmt_check_email->num_rows > 0) {
+        die("Este email já está cadastrado. Por favor, utilize outro.");
+    }
+
     $senhaHashed = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Preparando a query para inserir os dados do usuário no banco
+
     $stmt = $conn->prepare("INSERT INTO usuarios (nome, tel, email, senha, bairro, logradouro, numero, cidade, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     if (!$stmt) {
         die("Erro na preparação da query: " . $conn->error);
@@ -64,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $stmt->close();
+    $stmt_check_email->close();
 } else {
     die("Método inválido.");
 }

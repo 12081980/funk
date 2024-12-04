@@ -104,4 +104,16 @@ if (isset($_POST['excluirProduto'])) {
         ?>
 
     </table>
+    <div class="btnloja">
+
+        <a href=" ./index.php?menuop=produtos">
+            <button>Cadastrar produtos</button>
+        </a>
+    </div>
+    <div class="btnloja">
+
+        <a href="javascript:history.back()">Voltar</a>
+
+        </a>
+    </div>
 </div>

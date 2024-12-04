@@ -26,7 +26,7 @@
         </div>
         <div class="btnloja">
 
-            <a href=" ./index.php?menuop=produtos">
+            <a href=" ./index.php?menuop=produtosCad">
                 <button>VISUALIZAR</button>
             </a>
         </div>

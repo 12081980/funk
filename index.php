@@ -36,7 +36,8 @@ $validPages = [
     'produtos' => VIEW_PATH . 'compra/produtos.php',
     'tabela' => VIEW_PATH . 'carrinho/tabelaProdutos.php',
     'usuarioCad' => VIEW_PATH . 'adm/usuariosCadastrados.php',
-    'produtosCad' => VIEW_PATH . 'adm/produtosCadastrados.php'
+    'produtosCad' => VIEW_PATH . 'adm/produtosCadastrados.php',
+    'dados' => VIEW_PATH . './controller/dados.php',
 
 ];
 

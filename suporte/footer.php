@@ -17,6 +17,11 @@
         </body>
 
         <script src="./js/botao.js"></script>
+        <script src="./js/controleMusica.js"></script>
+        <script src="./js/validar.js"></script>
+        <script src="./js/comentarios.js"></script>
+        <script src="./js/spotify.js"></script>
+
         <!-- <script src="./js/suporte.js"></script>
         <script src="./js/carrinho.js"></script>
         <script src="./js/buscar.js"></script>

@@ -878,6 +878,26 @@ background-color: green;
     text-align: center;
     font-size: 25px;
 }
+@media (max-width: 768px) {
+    .loja {
+        flex-direction: column;
+        width: 100%; /* Ajusta a largura em telas pequenas */
+    }
+
+    .boxloja {
+        width: 90%; /* Aumenta a largura do produto */
+        
+        
+margin-bottom: 15px; /* Espaço maior entre os produtos */
+    }
+
+    .btnloja p {
+        font-size: 18px;  /* Ajuste de fonte em telas pequenas */
+    }
+}
+
+
+
           #servicos .containerserv input[type=radio]{
             display: none;
         
@@ -1067,21 +1087,35 @@ font-size: 25px;
          scale: 1.5;
             color:green;
         }
-        .musica{
-        width: 100%;
-        /* background-color: red;  */
-         height: 80vh;
-        margin-top: 10px;
+       .musica{
+        width: 98%;
         display: flex;
-     margin-left: 20px;
+        padding: 10px;
+       margin: 10px;
+       }        
+        .boxMusica{           
+            margin: 3px;
+            width: 50%;
+            height: 55vh;          
+            left: 0;
+            right: 0;
+            margin: 8px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            box-shadow: 0 0 10px #848790;
         }
-        .favorita{
-
-width: 50%;
-        }
-        .fan{
-background-color: yellow;
-width: 50%;
+        .comentarios{
+            margin: 3px;
+            width: 50%;
+            height: 55vh;          
+            left: 0;
+            right: 0;
+            margin: 8px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            box-shadow: 0 0 10px #848790;
         }
               
         .cadastro{
@@ -1090,40 +1124,37 @@ width: 50%;
          display: flex;
       margin-left: 20px;
       padding: 10px;
-      justify-content: space-between;
-           
+      justify-content: space-around;
+     
         }
 .tela-login2{
     width: 48%;
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: self-start;
+    flex-direction: column;   
     background-color: #efefef; 
     border-radius: 15px;
     color: #101010ff;
+    /* justify-content: space-around; */
    
 }
-.tela-login2 input{
-    width: 100%;
-
-}
-
 .endereco{
     width: 48%;
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
     background-color: #efefef;   
     border-radius: 15px;
     color: #101010ff; 
+    justify-content: space-around;
+
 }
 .endereco input{
 font-size: 20px;
+
 }
 #btncad{
-    margin-top: 30px;
+    margin-top: 80px;
    
  
 }
@@ -1312,3 +1343,76 @@ td input[type="text"] {
     position: absolute;
     margin-top: 30px;
 }
+
+.titulovideo{
+/* background-color: red; */
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px;
+width: 90%;
+height: 50vh;
+
+}
+
+.senha{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px rgb(105, 105, 105);
+    background-color: #efefef;
+    font-size: 23px;
+    letter-spacing: 0.7px;
+    font-family: 'Teko', sans-serif;
+    margin: 8px 0px 10px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.containerMusica {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .comment-section {
+    margin-top: 20px;
+  }
+  .comment-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .comments-list {
+    list-style-type: none;
+    padding-left: 0;
+    color: white;
+  }
+  .comments-list li {
+    margin-bottom: 10px;
+  }
+
+  #musicResuts{
+    width: 30%;
+    height: 50vh;
+  }
+  #musicResuts p{
+    font-size: 10px;
+  }

@@ -12,4 +12,9 @@
 
     <input type="submit" value="Cadastrar produto">
 </form>
-<a href="javascript:history.back()">Voltar</a>
+<div class="btnloja">
+
+    <a href="javascript:history.back()">Voltar</a>
+
+    </a>
+</div>

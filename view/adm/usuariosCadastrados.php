@@ -2,26 +2,21 @@
 
 
 require_once './model/classeUsuario.php';
-
-// Verifica se o usuário está logado e é um administrador
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
     header("Location: login.php");
     exit();
 }
-
 try {
-    // Conexão com o banco de dados (ajustar conforme necessário)
-    $user = new Usuario("funk_rap", "localhost", "root", ""); // Considere usar variáveis de ambiente
+    $user = new Usuario("funk_rap", "localhost", "root", "");
 } catch (Exception $e) {
     header("Location: error.php?message=" . urlencode("Falha na conexão: " . $e->getMessage()));
     exit();
 }
-
-// Verifica se a ação de exclusão foi solicitada
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
     $delete_id = $_POST['delete_id'];
     if ($user->excluirUsuario($delete_id)) {
-        $_SESSION['message'] = "Usuário excluído com sucesso";
+        // $_SESSION['message'] = "Usuário excluído com sucesso";
+        echo "<script>alert('usuario excluido com sucesso);</script>";
     } else {
         $_SESSION['message'] = "Erro ao excluir o usuário";
     }
@@ -54,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['editar_id'])) {
         <p> <?php echo $_SESSION['user_nome']; ?>! ADIMISTRADOR</p> <a href="./controller/sair.php">
             <span class="material-symbols-outlined">logout</span>
         </a>
-        <a href="javascript:history.back()">Voltar</a>
+
     </div>
 
 
@@ -116,7 +111,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['editar_id'])) {
         }
         ?>
     </div>
+    <div class="btnloja">
 
+        <a href="javascript:history.back()">Voltar</a>
+
+        </a>
+    </div>
 </body>
 
 </html>

@@ -30,12 +30,13 @@ try {
     <h1><span class="material-symbols-outlined">shopping_cart</span></h1><br>
     <div class="boxcarrinho">
         <div class="pagamento">
+
         </div>
     </div>
     <div class="entrega">
         <h1>DADOS PESSOAIS</h1>
         <div class="linecar"></div>
-        <form action="dados.php" method="POST">
+        <form action="./controller/finalizarCompra.php" method="POST">
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($dados_usuario['id']); ?>">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($dados_usuario['nome']); ?>"
