@@ -25,7 +25,8 @@ if (isset($_POST['cadastrarProdutos'])) {
             try {
                 // Atualiza o produto no banco de dados
                 $produto->atualizarProduto($idProduto, $nomeProduto, $quantidadeProduto, $valorProduto);
-                $msgSucesso = 'Produto atualizado com sucesso!';
+                echo "<script>alert('Produto atualizado com sucesso!');</script>";
+                // $msgSucesso = 'Produto atualizado com sucesso!';
             } catch (Exception $e) {
                 // Mensagem de erro
                 $msgErro = 'Erro ao atualizar produto: ' . $e->getMessage();
@@ -45,7 +46,7 @@ if (isset($_POST['excluirProduto'])) {
 
     try {
         $produto->excluirProduto($idProduto);
-        $msgSucesso = 'Produto excluído com sucesso!';
+        echo "<script>alert('Produto excluido com sucesso');</script>";
     } catch (Exception $e) {
         $msgErro = 'Erro ao excluir produto: ' . $e->getMessage();
     }
@@ -70,7 +71,7 @@ if (isset($_POST['excluirProduto'])) {
 
         <?php
         try {
-            // Chama o método para obter os dados dos produtos
+
             $dados = $produto->buscarDadosProdutos();
 
             if (count($dados) > 0) {

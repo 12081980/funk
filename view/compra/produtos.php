@@ -1,5 +1,3 @@
-<h1>Sistema de cadastro de produtos</h1>
-
 <form class="produtoCad" action="./controller/cadastroProduto.php" method="post">
     <label>Nome do produto:</label>
     <input type="text" name="nomeProduto">
