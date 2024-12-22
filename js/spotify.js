@@ -1,3 +1,6 @@
+
+
+
 const CLIENT_ID = '71f2124d58744ac4948ffa5a1fe14b5c';
 const CLIENT_SECRET = '697e7e954244469aa469ec3f2d1ee25a';
 async function getAccessToken() {
@@ -39,7 +42,7 @@ function displayTracks(tracks) {
 <h3>${track.name}</h3>
 <p>Artista(s): ${track.artists.map(artist => artist.name).join(', ')}</p>
 <p>Álbum: ${track.album.name}</p>
-<img src="${track.album.images[0].url}" alt="${track.name}" style="width: 10px; height: 10px;" />
+<img src="${track.album.images[0].url}" alt="${track.name}" style="width: 80px; height: 80px;" />
 <a href="${track.external_urls.spotify}" target="_blank">Ouvir no Spotify</a>
 <hr />
 `;

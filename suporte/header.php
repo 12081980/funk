@@ -18,8 +18,7 @@ session_start();
 </head>
 
 <body>
-
-    <!-- Inicio Navegação -->
+    <!-- Início Navegação -->
     <header>
         <div><a class="logo" href="./index.php">Cultura Funk</a></div>
         <div class="hamb">
@@ -27,45 +26,33 @@ session_start();
         </div>
         <nav class="nav-bar">
             <ul>
-                <li>
-                    <a href="index.php?menuop=sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="index.php?menuop=musica">Musicas</a>
-                </li>
-                <li>
-                    <a href="index.php?menuop=artista">Artista</a>
-                </li>
-                <li>
-                    <a href="index.php?menuop=loja">Loja</a>
-                </li>
+                <li><a href="index.php?menuop=sobre">Sobre</a></li>
+                <li><a href="index.php?menuop=musica">Músicas</a></li>
+                <li><a href="index.php?menuop=artista">Artistas</a></li>
+                <li><a href="index.php?menuop=loja">Loja</a></li>
+                
                 <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'usuario'): ?>
-                    <div class="perfil">
+                    <li class="perfil">
                         <a href="./index.php?menuop=usuario">
-                            <p>Olá,<?php echo $_SESSION['user_nome']; ?>!</p>
-
+                            <span class="material-symbols-outlined">account_circle</span>
+                            <p><?php echo htmlspecialchars($_SESSION['user_nome']); ?></p>
                         </a>
-                        <a href="./controller/sair.php">
-
-                            <span class="material-symbols-outlined">logout</span>
-                        </a>
-                    </div>
-
-                <?php else: ?>
-
-                    <li>
-                        <a href="index.php?menuop=login">LOGIN</a>
                     </li>
+                    <li>
+                        <a href="./controller/sair.php">
+                            <span class="material-symbols-outlined">logout</span>
+                            Sair
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li><a href="index.php?menuop=login">LOGIN</a></li>
                 <?php endif; ?>
-
             </ul>
         </nav>
     </header>
 
     <section class="inicio">
-
-        <!-- </section>
-
+        <!-- Conteúdo da seção -->
+    </section>
 </body>
-
-</html> -->
+</html>

@@ -1,10 +1,8 @@
 <form class="search-container">
-    <input type="text" id="search-bar" placeholder="Busca">
-    <a href="#"><img class="search-icon"
-            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+
 </form>
 <div class="musica">
-    <div class="boxMusica">
+    <div class="search-container">
         <!-- <h1>Buscar Músicas no Spotify</h1> -->
         <input type="text" id="trackName" placeholder="Digite o nome da música" />
 
@@ -79,21 +77,4 @@
             </script> -->
     </div>
 
-    <div class="comentarios">
-        <div class="containerMusica">
-            <div class="buttons">
-                <button id="likeButton">Curtir</button>
-            </div>
-
-            <div id="likeStatus" style="margin-top: 10px; color:white">Curtido: 0</div>
-
-            <div class="comment-section">
-                <textarea id="commentBox" class="comment-box" placeholder="Escreva um comentário..."></textarea>
-                <button id="postCommentButton">Postar Comentário</button>
-                <ul id="commentsList" class="comments-list">
-
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
